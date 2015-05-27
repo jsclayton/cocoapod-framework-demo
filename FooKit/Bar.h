@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface Bar : NSObject
+@interface Bar : MTLModel
 
 @property (nonatomic, strong, readonly) NSString *baz;
 

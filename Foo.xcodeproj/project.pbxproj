@@ -29,6 +29,7 @@
 		52C4CA6E1B1656F100A21965 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C4CA6C1B1656F100A21965 /* Bar.m */; };
 		52C4CA701B165D9100A21965 /* FooKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C4CA251B1655D600A21965 /* FooKit.framework */; };
 		52C4CA711B165D9100A21965 /* FooKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52C4CA251B1655D600A21965 /* FooKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A994F1E101B00059DAEC2F89 /* libPods-FooKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A2D88FCF2806FA2EC734B5 /* libPods-FooKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13A2D88FCF2806FA2EC734B5 /* libPods-FooKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FooKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C4C9F71B1655C100A21965 /* Foo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C4C9FB1B1655C100A21965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52C4C9FC1B1655C100A21965 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +152,8 @@
 		52C4CA5E1B16560000A21965 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52C4CA6B1B1656F100A21965 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
 		52C4CA6C1B1656F100A21965 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
+		59D2C7D5DE287F1645082FC5 /* Pods-FooKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FooKit/Pods-FooKit.debug.xcconfig"; sourceTree = "<group>"; };
+		EFFAD4DBEADC201335DBD8F7 /* Pods-FooKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FooKit/Pods-FooKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A994F1E101B00059DAEC2F89 /* libPods-FooKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +199,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DD71F2EDC231C0A27EFDB78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13A2D88FCF2806FA2EC734B5 /* libPods-FooKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52C4C9EE1B1655C100A21965 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,8 @@
 				52C4CA4A1B16560000A21965 /* Foo WatchKit Extension */,
 				52C4CA581B16560000A21965 /* Foo WatchKit App */,
 				52C4C9F81B1655C100A21965 /* Products */,
+				B6F0249BA47A15B891B07AFF /* Pods */,
+				4DD71F2EDC231C0A27EFDB78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,6 +349,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B6F0249BA47A15B891B07AFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59D2C7D5DE287F1645082FC5 /* Pods-FooKit.debug.xcconfig */,
+				EFFAD4DBEADC201335DBD8F7 /* Pods-FooKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -392,10 +416,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52C4CA3E1B1655D600A21965 /* Build configuration list for PBXNativeTarget "FooKit" */;
 			buildPhases = (
+				C40209A8DB24492F783CF493 /* Check Pods Manifest.lock */,
 				52C4CA201B1655D600A21965 /* Sources */,
 				52C4CA211B1655D600A21965 /* Frameworks */,
 				52C4CA221B1655D600A21965 /* Headers */,
 				52C4CA231B1655D600A21965 /* Resources */,
+				88345949AFF9CA531019ADE8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -565,6 +591,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88345949AFF9CA531019ADE8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FooKit/Pods-FooKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C40209A8DB24492F783CF493 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52C4C9F31B1655C100A21965 /* Sources */ = {
@@ -813,8 +872,10 @@
 		};
 		52C4CA3F1B1655D600A21965 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59D2C7D5DE287F1645082FC5 /* Pods-FooKit.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -837,8 +898,10 @@
 		};
 		52C4CA401B1655D600A21965 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFFAD4DBEADC201335DBD8F7 /* Pods-FooKit.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -962,6 +1025,7 @@
 				52C4CA1C1B1655C100A21965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52C4CA1D1B1655C100A21965 /* Build configuration list for PBXNativeTarget "FooTests" */ = {
 			isa = XCConfigurationList;
@@ -970,6 +1034,7 @@
 				52C4CA1F1B1655C100A21965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52C4CA3E1B1655D600A21965 /* Build configuration list for PBXNativeTarget "FooKit" */ = {
 			isa = XCConfigurationList;
@@ -978,6 +1043,7 @@
 				52C4CA401B1655D600A21965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52C4CA421B1655D600A21965 /* Build configuration list for PBXNativeTarget "FooKitTests" */ = {
 			isa = XCConfigurationList;
@@ -986,6 +1052,7 @@
 				52C4CA441B1655D600A21965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52C4CA631B16560000A21965 /* Build configuration list for PBXNativeTarget "Foo WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -994,6 +1061,7 @@
 				52C4CA651B16560000A21965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52C4CA661B16560000A21965 /* Build configuration list for PBXNativeTarget "Foo WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1002,6 +1070,7 @@
 				52C4CA681B16560000A21965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
