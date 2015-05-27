@@ -2,7 +2,7 @@
 platform :ios, '8.0'
 
 target 'Foo' do
-
+    pod 'Mantle'
 end
 
 target 'FooTests' do
@@ -18,7 +18,7 @@ target 'FooKitTests' do
 end
 
 target 'Foo WatchKit Extension' do
-
+    pod 'Mantle'
 end
 
 target 'Foo WatchKit App' do
